@@ -1,0 +1,46 @@
+Version 4.0 HI-TECH Software Intermediate Code
+"9 service/../hal/hal_sensor.h
+[; ;service/../hal/hal_sensor.h: 9: uint16_t ReadLDR1(void);
+[v _ReadLDR1 `(us ~T0 @X0 0 ef ]
+"13
+[; ;service/../hal/hal_sensor.h: 13: uint16_t ReadLDR2(void);
+[v _ReadLDR2 `(us ~T0 @X0 0 ef ]
+"17
+[; ;service/../hal/hal_sensor.h: 17: _Bool ReadPIR(void);
+[v _ReadPIR `(a ~T0 @X0 0 ef ]
+"6 service/sensor_service.c
+[; ;service/sensor_service.c: 6: _Bool IsDarkCondition(void) {
+[v _IsDarkCondition `(a ~T0 @X0 1 ef ]
+{
+[e :U _IsDarkCondition ]
+[f ]
+"8
+[; ;service/sensor_service.c: 8:     uint16_t ldr1 = (uint16_t)ReadLDR1();
+[v _ldr1 `us ~T0 @X0 1 a ]
+[e = _ldr1 ( _ReadLDR1 ..  ]
+"9
+[; ;service/sensor_service.c: 9:     uint16_t ldr2 = (uint16_t)ReadLDR2();
+[v _ldr2 `us ~T0 @X0 1 a ]
+[e = _ldr2 ( _ReadLDR2 ..  ]
+"11
+[; ;service/sensor_service.c: 11:     return (ldr1 > 900 // Adjust as needed // Threshold for distinguishing dark condition (adjust as needed)) && (ldr2 > 900 // Adjust as needed // Threshold for distinguishing dark condition (adjust as needed));
+[e ) -> -> && > -> _ldr1 `ui -> -> 900 `i `ui > -> _ldr2 `ui -> -> 900 `i `ui `i `a ]
+[e $UE 1  ]
+"12
+[; ;service/sensor_service.c: 12: }
+[e :UE 1 ]
+}
+"15
+[; ;service/sensor_service.c: 15: _Bool IsMotionDetected(void) {
+[v _IsMotionDetected `(a ~T0 @X0 1 ef ]
+{
+[e :U _IsMotionDetected ]
+[f ]
+"17
+[; ;service/sensor_service.c: 17:     return ReadPIR();
+[e ) ( _ReadPIR ..  ]
+[e $UE 2  ]
+"18
+[; ;service/sensor_service.c: 18: }
+[e :UE 2 ]
+}
