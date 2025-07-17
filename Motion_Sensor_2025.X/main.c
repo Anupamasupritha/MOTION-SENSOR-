@@ -27,24 +27,6 @@ void main(void)
 }
 
 
-//#if (TEST_ENABLE)
-  // #if(ADC_0)
-    // char x =test_adc(0);
-     //assert (x)
-    //#endif
-   //#if(I2C_0)
-     //test_i2c(0);
-    //#endif
-//#endif         
-
-/*int assert (bool x)
-//{
-  //  if (x==1)
-    //    return 0;
-    //else 
-      //  while(1)
-//}
-*/
 
 
 
