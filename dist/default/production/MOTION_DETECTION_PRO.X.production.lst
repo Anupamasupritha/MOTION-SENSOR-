@@ -1,7 +1,7 @@
 
 
 Microchip MPLAB XC8 Assembler V2.40 build 20220703182018 
-                                                                                               Fri Jul 11 17:44:06 2025
+                                                                                               Sat Jul 19 15:47:56 2025
 
 Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1 
      1                           	processor	12F1572
@@ -1942,7 +1942,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1928 ;;
   1929 ;; *************** function _main *****************
   1930 ;; Defined at:
-  1931 ;;		line 65 in file "main.c"
+  1931 ;;		line 68 in file "main.c"
   1932 ;; Parameters:    Size  Location     Type
   1933 ;;		None
   1934 ;; Auto vars:     Size  Location     Type
@@ -1985,7 +1985,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1971                           ; Regs used in _main: [wreg+fsr1l+fsr1h+status,2+status,0+pclath+cstack]
   1972                           
   1973                           
-  1974                           ;main.c: 68:     SYSTEM_Initialize();
+  1974                           ;main.c: 71:     SYSTEM_Initialize();
   1975     002F  3182  2227  3180   	fcall	_SYSTEM_Initialize
   1976     0032                     l1390:
   1977     0032  0021               	movlb	1	; select bank1
@@ -1994,7 +1994,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1980     0034                     l1394:
   1981     0034                     l1396:
   1982                           
-  1983                           ;main.c: 74:     _Bool V_LightStatus;;main.c: 75:     uint32_t myTimer = 0;
+  1983                           ;main.c: 77:     _Bool V_LightStatus;;main.c: 78:     uint32_t myTimer = 0;
   1984     0034  3000               	movlw	0
   1985     0035  0020               	movlb	0	; select bank0
   1986     0036  00AD               	movwf	main@myTimer+3
@@ -2006,7 +2006,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   1992     003C  00AA               	movwf	main@myTimer
   1993     003D                     l1398:
   1994                           
-  1995                           ;main.c: 77:     V_LightStatus =old_light_status();
+  1995                           ;main.c: 80:     V_LightStatus =old_light_status();
   1996     003D  3181  219C  3180   	fcall	_old_light_status
   1997     0040  3A00               	xorlw	0
   1998     0041  1D03               	skipz
@@ -2022,7 +2022,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   2008     0048  00AE               	movwf	main@V_LightStatus
   2009     0049                     l1400:
   2010                           
-  2011                           ;main.c: 79: {;main.c: 80:     ldr1 = ADC1_GetConversion(channel_AN0);
+  2011                           ;main.c: 82: {;main.c: 83:     ldr1 = ADC1_GetConversion(channel_AN0);
   2012     0049  3000               	movlw	0
   2013     004A  3181  21E1  3180   	fcall	_ADC1_GetConversion
   2014     004D  0871               	movf	?_ADC1_GetConversion+1,w
@@ -2032,7 +2032,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   2018     0051  00A6               	movwf	main@ldr1
   2019     0052                     l1402:
   2020                           
-  2021                           ;main.c: 81:     _delay((unsigned long)((5)*(4000000/4000.0)));
+  2021                           ;main.c: 84:     _delay((unsigned long)((5)*(4000000/4000.0)));
   2022     0052  3007               	movlw	7
   2023     0053  0020               	movlb	0	; select bank0
   2024     0054  00A5               	movwf	??_main
@@ -2043,7 +2043,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   2029     0058  0BA5               	decfsz	??_main,f
   2030     0059  2856               	goto	u567
   2031                           
-  2032                           ;main.c: 82:     ldr2 = ADC1_GetConversion(channel_AN2);
+  2032                           ;main.c: 85:     ldr2 = ADC1_GetConversion(channel_AN2);
   2033     005A  3002               	movlw	2
   2034     005B  3181  21E1  3180   	fcall	_ADC1_GetConversion
   2035     005E  0871               	movf	?_ADC1_GetConversion+1,w
@@ -2053,7 +2053,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   2039     0062  00A8               	movwf	main@ldr2
   2040     0063                     l1404:
   2041                           
-  2042                           ;main.c: 83:     _delay((unsigned long)((5)*(4000000/4000.0)));
+  2042                           ;main.c: 86:     _delay((unsigned long)((5)*(4000000/4000.0)));
   2043     0063  3007               	movlw	7
   2044     0064  0020               	movlb	0	; select bank0
   2045     0065  00A5               	movwf	??_main
@@ -2065,7 +2065,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   2051     006A  2867               	goto	u577
   2052     006B                     l1406:
   2053                           
-  2054                           ;main.c: 87:     if (ldr1 > 750 && ldr2 > 750)
+  2054                           ;main.c: 90:     if (ldr1 > 750 && ldr2 > 750)
   2055     006B  3002               	movlw	2
   2056     006C  0020               	movlb	0	; select bank0
   2057     006D  0227               	subwf	main@ldr1+1,w
@@ -2092,7 +2092,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   2078     007E                     u490:
   2079     007E                     l1410:
   2080                           
-  2081                           ;main.c: 88:     {;main.c: 89:         if (V_LightStatus == 0)
+  2081                           ;main.c: 91:     {;main.c: 92:         if (V_LightStatus == 0)
   2082     007E  082E               	movf	main@V_LightStatus,w
   2083     007F  1D03               	btfss	3,2
   2084     0080  2882               	goto	u501
@@ -2101,24 +2101,24 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   2087     0082  289F               	goto	l1420
   2088     0083                     u500:
   2089     0083                     l275:	
-  2090                           ;main.c: 90:         {;main.c: 92:             do { LATAbits.LATA5 = 1; } while(0);
+  2090                           ;main.c: 93:         {;main.c: 95:             do { LATAbits.LATA5 = 1; } while(0);
   2091                           
   2092     0083  0022               	movlb	2	; select bank2
   2093     0084  168C               	bsf	12,5	;volatile
   2094     0085                     l276:
   2095                           
-  2096                           ;main.c: 93:             V_LightStatus = 1;
+  2096                           ;main.c: 96:             V_LightStatus = 1;
   2097     0085  0020               	movlb	0	; select bank0
   2098     0086  01AE               	clrf	main@V_LightStatus
   2099     0087  0AAE               	incf	main@V_LightStatus,f
   2100     0088                     l1412:
   2101                           
-  2102                           ;main.c: 95:             SoftDelay_Start(&myTimer);
+  2102                           ;main.c: 98:             SoftDelay_Start(&myTimer);
   2103     0088  302A               	movlw	(low (main@myTimer| 0))& (0+255)
   2104     0089  3182  223A  3180   	fcall	_SoftDelay_Start
   2105     008C                     l1414:
   2106                           
-  2107                           ;main.c: 98:             if (V_LightStatus != last_saved_status)
+  2107                           ;main.c: 101:             if (V_LightStatus != last_saved_status)
   2108     008C  0020               	movlb	0	; select bank0
   2109     008D  0346               	decf	_last_saved_status,w
   2110     008E  1903               	btfsc	3,2
@@ -2129,8 +2129,8 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   2115     0092                     u510:
   2116     0092                     l1416:
   2117                           
-  2118                           ;main.c: 99:             {;main.c: 100:                 ReadWrite_HEFlash(1, V_LightStat
-      +                          us, 0x0780);
+  2118                           ;main.c: 102:             {;main.c: 103:                 ReadWrite_HEFlash(1, V_LightSta
+      +                          tus, 0x0780);
   2119     0092  01F2               	clrf	ReadWrite_HEFlash@data
   2120     0093  0AF2               	incf	ReadWrite_HEFlash@data,f
   2121     0094  3080               	movlw	128
@@ -2141,13 +2141,13 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   2126     0099  3180  20E0  3180   	fcall	_ReadWrite_HEFlash
   2127     009C                     l1418:
   2128                           
-  2129                           ;main.c: 101:                 last_saved_status = V_LightStatus;
+  2129                           ;main.c: 104:                 last_saved_status = V_LightStatus;
   2130     009C  0020               	movlb	0	; select bank0
   2131     009D  01C6               	clrf	_last_saved_status
   2132     009E  0AC6               	incf	_last_saved_status,f
   2133     009F                     l1420:
   2134                           
-  2135                           ;main.c: 105:         if (SoftDelay_IsOneMinuteOver(&myTimer))
+  2135                           ;main.c: 108:         if (SoftDelay_IsOneMinuteOver(&myTimer))
   2136     009F  302A               	movlw	(low (main@myTimer| 0))& (0+255)
   2137     00A0  3181  2155  3180   	fcall	_SoftDelay_IsOneMinuteOver
   2138     00A3  3A00               	xorlw	0
@@ -2158,18 +2158,18 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   2143     00A7  28D5               	goto	l1440
   2144     00A8                     u520:
   2145     00A8                     l279:	
-  2146                           ;main.c: 106:         {;main.c: 107:             do { LATAbits.LATA5 = 0; } while(0);
+  2146                           ;main.c: 109:         {;main.c: 110:             do { LATAbits.LATA5 = 0; } while(0);
   2147                           
   2148     00A8  0022               	movlb	2	; select bank2
   2149     00A9  128C               	bcf	12,5	;volatile
   2150     00AA                     l1422:
   2151                           
-  2152                           ;main.c: 108:             V_LightStatus = 0;
+  2152                           ;main.c: 111:             V_LightStatus = 0;
   2153     00AA  0020               	movlb	0	; select bank0
   2154     00AB  01AE               	clrf	main@V_LightStatus
   2155     00AC                     l1424:
   2156                           
-  2157                           ;main.c: 111:             if (V_LightStatus != last_saved_status)
+  2157                           ;main.c: 114:             if (V_LightStatus != last_saved_status)
   2158     00AC  0846               	movf	_last_saved_status,w
   2159     00AD  1903               	btfsc	3,2
   2160     00AE  28B0               	goto	u531
@@ -2179,7 +2179,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   2164     00B1                     u530:
   2165     00B1                     l1426:
   2166                           
-  2167                           ;main.c: 112:             {;main.c: 113:                 ReadWrite_HEFlash(1, V_LightSta
+  2167                           ;main.c: 115:             {;main.c: 116:                 ReadWrite_HEFlash(1, V_LightSta
       +                          tus, 0x0780);
   2168     00B1  01F2               	clrf	ReadWrite_HEFlash@data
   2169     00B2  3080               	movlw	128
@@ -2190,13 +2190,13 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   2174     00B7  3180  20E0  3180   	fcall	_ReadWrite_HEFlash
   2175     00BA                     l1428:
   2176                           
-  2177                           ;main.c: 114:                 last_saved_status = V_LightStatus;
+  2177                           ;main.c: 117:                 last_saved_status = V_LightStatus;
   2178     00BA  0020               	movlb	0	; select bank0
   2179     00BB  01C6               	clrf	_last_saved_status
   2180     00BC  28D5               	goto	l1440
   2181     00BD                     l1430:
   2182                           
-  2183                           ;main.c: 119:     {;main.c: 120:         if (V_LightStatus == 1)
+  2183                           ;main.c: 122:     {;main.c: 123:         if (V_LightStatus == 1)
   2184     00BD  032E               	decf	main@V_LightStatus,w
   2185     00BE  1D03               	btfss	3,2
   2186     00BF  28C1               	goto	u541
@@ -2205,18 +2205,18 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   2189     00C1  28D5               	goto	l1440
   2190     00C2                     u540:
   2191     00C2                     l284:	
-  2192                           ;main.c: 121:         {;main.c: 122:             do { LATAbits.LATA5 = 0; } while(0);
+  2192                           ;main.c: 124:         {;main.c: 125:             do { LATAbits.LATA5 = 0; } while(0);
   2193                           
   2194     00C2  0022               	movlb	2	; select bank2
   2195     00C3  128C               	bcf	12,5	;volatile
   2196     00C4                     l1432:
   2197                           
-  2198                           ;main.c: 123:             V_LightStatus = 0;
+  2198                           ;main.c: 126:             V_LightStatus = 0;
   2199     00C4  0020               	movlb	0	; select bank0
   2200     00C5  01AE               	clrf	main@V_LightStatus
   2201     00C6                     l1434:
   2202                           
-  2203                           ;main.c: 126:             if (V_LightStatus != last_saved_status)
+  2203                           ;main.c: 129:             if (V_LightStatus != last_saved_status)
   2204     00C6  0846               	movf	_last_saved_status,w
   2205     00C7  1903               	btfsc	3,2
   2206     00C8  28CA               	goto	u551
@@ -2226,7 +2226,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   2210     00CB                     u550:
   2211     00CB                     l1436:
   2212                           
-  2213                           ;main.c: 127:             {;main.c: 128:                 ReadWrite_HEFlash(1, V_LightSta
+  2213                           ;main.c: 130:             {;main.c: 131:                 ReadWrite_HEFlash(1, V_LightSta
       +                          tus, 0x0780);
   2214     00CB  01F2               	clrf	ReadWrite_HEFlash@data
   2215     00CC  3080               	movlw	128
@@ -2238,7 +2238,7 @@ Microchip MPLAB XC8 C Compiler v2.40 (Free license) build 20220703182018 Og1
   2221     00D4  28BA               	goto	l1428
   2222     00D5                     l1440:
   2223                           
-  2224                           ;main.c: 134:     _delay((unsigned long)((100)*(4000000/4000.0)));
+  2224                           ;main.c: 137:     _delay((unsigned long)((100)*(4000000/4000.0)));
   2225     00D5  3082               	movlw	130
   2226     00D6  0020               	movlb	0	; select bank0
   2227     00D7  00A5               	movwf	??_main
@@ -4319,7 +4319,7 @@ SFR31                0      0       0      32        0.0%
 
 
 Microchip Technology PIC Macro Assembler V2.40 build 20220703182018 
-Symbol Table                                                                                   Fri Jul 11 17:44:06 2025
+Symbol Table                                                                                   Sat Jul 19 15:47:56 2025
 
                                            l34 01F2                                             l19 027F  
                                            l37 01FA                                             l71 02A9  

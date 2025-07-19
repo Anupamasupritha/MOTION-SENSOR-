@@ -11,7 +11,7 @@ channel_Temp 29
 channel_DAC 30
 channel_FVR 31
 ]
-"80 C:\Users\Sony\Desktop\MPLAB Program\MOTION_DETECTION_PRO.X\main.c
+"83 C:\Users\Sony\Desktop\MPLAB Program\MOTION_DETECTION_PRO.X\main.c
 [e E3375 . `uc
 channel_AN0 0
 channel_AN2 2
@@ -23,7 +23,7 @@ channel_FVR 31
 [v ___fladd __fladd `(d  1 e 4 0 ]
 "4 C:\Program Files\Microchip\xc8\v2.40\pic\sources\c99\common\Umul8_16.c
 [v __Umul8_16 _Umul8_16 `(ui  1 e 2 0 ]
-"65 C:\Users\Sony\Desktop\MPLAB Program\MOTION_DETECTION_PRO.X\main.c
+"68 C:\Users\Sony\Desktop\MPLAB Program\MOTION_DETECTION_PRO.X\main.c
 [v _main main `(v  1 e 1 0 ]
 "67 C:\Users\Sony\Desktop\MPLAB Program\MOTION_DETECTION_PRO.X\mcc_generated_files/adc1.c
 [v _ADC1_Initialize ADC1_Initialize `(v  1 e 1 0 ]
@@ -269,7 +269,7 @@ channel_FVR 31
 [v _WR WR `VEb  1 e 0 @3241 ]
 "10112
 [v _WREN WREN `VEb  1 e 0 @3242 ]
-"62 C:\Users\Sony\Desktop\MPLAB Program\MOTION_DETECTION_PRO.X\main.c
+"65 C:\Users\Sony\Desktop\MPLAB Program\MOTION_DETECTION_PRO.X\main.c
 [v _last_saved_status last_saved_status `uc  1 s 1 last_saved_status ]
 [s S276 . 1 `uc 1 perr 1 0 :1:0 
 `uc 1 ferr 1 0 :1:1 
@@ -291,18 +291,18 @@ channel_FVR 31
 [v _TMR0_InterruptHandler TMR0_InterruptHandler `*.37(v  1 e 2 0 ]
 "54 C:\Users\Sony\Desktop\MPLAB Program\MOTION_DETECTION_PRO.X\PIC12_HEFlash.c
 [v _SaveInt SaveInt `uc  1 e 1 0 ]
-"65 C:\Users\Sony\Desktop\MPLAB Program\MOTION_DETECTION_PRO.X\main.c
+"68 C:\Users\Sony\Desktop\MPLAB Program\MOTION_DETECTION_PRO.X\main.c
 [v _main main `(v  1 e 1 0 ]
 {
-"75
+"78
 [v main@myTimer myTimer `ul  1 a 4 10 ]
-"73
+"76
 [v main@ldr2 ldr2 `us  1 a 2 8 ]
-"72
+"75
 [v main@ldr1 ldr1 `us  1 a 2 6 ]
-"74
+"77
 [v main@V_LightStatus V_LightStatus `a  1 a 1 14 ]
-"136
+"139
 } 0
 "168 C:\Users\Sony\Desktop\MPLAB Program\MOTION_DETECTION_PRO.X\PIC12_HEFlash.c
 [v _old_light_status old_light_status `(uc  1 e 1 0 ]

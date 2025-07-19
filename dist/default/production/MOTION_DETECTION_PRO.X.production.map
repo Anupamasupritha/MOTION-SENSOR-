@@ -6,10 +6,10 @@ Linker command line:
   --edf=C:/Users/Sony/.mchp_packs/Microchip/PIC12-16F1xxx_DFP/1.8.254/xc8\pic\dat\20250327143623_en.msgs \
   -cn -h+dist/default/production\MOTION_DETECTION_PRO.X.production.sym \
   --cmf=dist/default/production\MOTION_DETECTION_PRO.X.production.cmf -z \
-  -Q12F1572 -oC:\Users\Sony\AppData\Local\Temp\xcAs5vg.4 \
+  -Q12F1572 -oC:\Users\Sony\AppData\Local\Temp\xcAsqts.4 \
   --defsym=__MPLAB_BUILD=1 --fixupoverflow=error \
   -Mdist/default/production/MOTION_DETECTION_PRO.X.production.map \
-  --md=C:\Users\Sony\AppData\Local\Temp\xcAs5vg.dat -E1 -ver=XC8 Compiler \
+  --md=C:\Users\Sony\AppData\Local\Temp\xcAsqts.dat -E1 -ver=XC8 Compiler \
   --acfsm=1493 -ACODE=00h-07FFh -ASTRCODE=00h-07FFh -ASTRING=00h-0FFhx8 \
   -ACONST=00h-0FFhx8 -AENTRY=00h-0FFhx8 -ACOMMON=070h-07Fh \
   -ABANK0=020h-06Fh -ABANK1=0A0h-0EFh -ABANK2=0120h-016Fh \
@@ -28,7 +28,7 @@ Linker command line:
   -ACONFIG=08007h-08008h -DCONFIG=2 -AIDLOC=08000h-08003h -DIDLOC=2 \
   -DCODE=2 -DSTRCODE=2 -DSTRING=2 -DCONST=2 -DENTRY=2 \
   -preset_vec=00h,intentry=04h,init,end_init -ppowerup=CODE -pcinit=CODE \
-  -pfunctab=ENTRY -k C:\Users\Sony\AppData\Local\Temp\xcAs5vg.o \
+  -pfunctab=ENTRY -k C:\Users\Sony\AppData\Local\Temp\xcAsqts.o \
   dist/default/production\MOTION_DETECTION_PRO.X.production.o 
 
 Object code version is 3.11
@@ -38,7 +38,7 @@ Machine type is 12F1572
 
 
                 Name                               Link     Load   Length Selector   Space Scale
-C:\Users\Sony\AppData\Local\Temp\xcAs5vg.o
+C:\Users\Sony\AppData\Local\Temp\xcAsqts.o
                 end_init                             13       13        1        8       0
                 reset_vec                             0        0        1        0       0
                 config                             8007     8007        2        0       4

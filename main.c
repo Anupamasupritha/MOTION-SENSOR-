@@ -46,6 +46,8 @@
 #include "Softdelay.h"
 
 
+
+
 #define LIGHT LATAbits.LATA1
 
 //#define ON 1
@@ -131,7 +133,6 @@ void main(void)
             }
         }
     }
-
     __delay_ms(100);
 }
 }

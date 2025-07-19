@@ -5223,9 +5223,9 @@ extern __bank0 __bit __powerdown;
 extern __bank0 __bit __timeout;
 # 28 "C:\\Program Files\\Microchip\\xc8\\v2.40\\pic\\include\\xc.h" 2 3
 # 54 "mcc_generated_files/pin_manager.h" 2
-# 167 "mcc_generated_files/pin_manager.h"
+# 159 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_Initialize (void);
-# 179 "mcc_generated_files/pin_manager.h"
+# 171 "mcc_generated_files/pin_manager.h"
 void PIN_MANAGER_IOC(void);
 # 49 "mcc_generated_files/pin_manager.c" 2
 

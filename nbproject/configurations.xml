@@ -47,9 +47,6 @@
       <itemPath>LDR_HE.mc3</itemPath>
     </logicalFolder>
   </logicalFolder>
-  <sourceRootList>
-    <Elem>../../../Downloads/Bulb_Holder_code/Bulb_Holder_code/IR_LIGHT_VER4(pic10f1572).X</Elem>
-  </sourceRootList>
   <projectmakefile>Makefile</projectmakefile>
   <confs>
     <conf name="default" type="2">

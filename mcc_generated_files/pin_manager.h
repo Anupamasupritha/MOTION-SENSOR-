@@ -85,25 +85,17 @@
 #define channel_AN0_SetAnalogMode()      do { ANSELAbits.ANSA0 = 1; } while(0)
 #define channel_AN0_SetDigitalMode()     do { ANSELAbits.ANSA0 = 0; } while(0)
 
-// get/set LED_RXU aliases
-#define LED_RXU_TRIS                 TRISAbits.TRISA1
-#define LED_RXU_LAT                  LATAbits.LATA1
-#define LED_RXU_PORT                 PORTAbits.RA1
-#define LED_RXU_WPU                  WPUAbits.WPUA1
-#define LED_RXU_OD                   ODCONAbits.ODA1
-#define LED_RXU_ANS                  ANSELAbits.ANSA1
-#define LED_RXU_SetHigh()            do { LATAbits.LATA1 = 1; } while(0)
-#define LED_RXU_SetLow()             do { LATAbits.LATA1 = 0; } while(0)
-#define LED_RXU_Toggle()             do { LATAbits.LATA1 = ~LATAbits.LATA1; } while(0)
-#define LED_RXU_GetValue()           PORTAbits.RA1
-#define LED_RXU_SetDigitalInput()    do { TRISAbits.TRISA1 = 1; } while(0)
-#define LED_RXU_SetDigitalOutput()   do { TRISAbits.TRISA1 = 0; } while(0)
-#define LED_RXU_SetPullup()          do { WPUAbits.WPUA1 = 1; } while(0)
-#define LED_RXU_ResetPullup()        do { WPUAbits.WPUA1 = 0; } while(0)
-#define LED_RXU_SetPushPull()        do { ODCONAbits.ODA1 = 0; } while(0)
-#define LED_RXU_SetOpenDrain()       do { ODCONAbits.ODA1 = 1; } while(0)
-#define LED_RXU_SetAnalogMode()      do { ANSELAbits.ANSA1 = 1; } while(0)
-#define LED_RXU_SetDigitalMode()     do { ANSELAbits.ANSA1 = 0; } while(0)
+// get/set RA1 procedures
+#define RA1_SetHigh()            do { LATAbits.LATA1 = 1; } while(0)
+#define RA1_SetLow()             do { LATAbits.LATA1 = 0; } while(0)
+#define RA1_Toggle()             do { LATAbits.LATA1 = ~LATAbits.LATA1; } while(0)
+#define RA1_GetValue()              PORTAbits.RA1
+#define RA1_SetDigitalInput()    do { TRISAbits.TRISA1 = 1; } while(0)
+#define RA1_SetDigitalOutput()   do { TRISAbits.TRISA1 = 0; } while(0)
+#define RA1_SetPullup()             do { WPUAbits.WPUA1 = 1; } while(0)
+#define RA1_ResetPullup()           do { WPUAbits.WPUA1 = 0; } while(0)
+#define RA1_SetAnalogMode()         do { ANSELAbits.ANSA1 = 1; } while(0)
+#define RA1_SetDigitalMode()        do { ANSELAbits.ANSA1 = 0; } while(0)
 
 // get/set channel_AN2 aliases
 #define channel_AN2_TRIS                 TRISAbits.TRISA2

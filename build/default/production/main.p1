@@ -21,8 +21,8 @@ Version 4.0 HI-TECH Software Intermediate Code
 "34 ./PIC12_HEFlash.h
 [; ;./PIC12_HEFlash.h: 34: unsigned char old_light_status(void);
 [v _old_light_status `(uc ~T0 @X0 0 ef ]
-"80 main.c
-[; ;main.c: 80:     ldr1 = ADC1_GetConversion(channel_AN0);
+"83 main.c
+[; ;main.c: 83:     ldr1 = ADC1_GetConversion(channel_AN0);
 [c E3375 0 2 29 30 31 .. ]
 [n E3375 . channel_AN0 channel_AN2 channel_Temp channel_DAC channel_FVR  ]
 "289 ./mcc_generated_files/adc1.h
@@ -563,220 +563,220 @@ Version 4.0 HI-TECH Software Intermediate Code
 [i _g_timer0OverflowCount
 -> -> -> 0 `i `l `ul
 ]
-"57 main.c
-[; ;main.c: 57: static uint32_t time_EEPROM_WRITE_Period = 0;
+"60 main.c
+[; ;main.c: 60: static uint32_t time_EEPROM_WRITE_Period = 0;
 [v _time_EEPROM_WRITE_Period `ul ~T0 @X0 1 s ]
 [i _time_EEPROM_WRITE_Period
 -> -> -> 0 `i `l `ul
 ]
-"58
-[; ;main.c: 58: uint16_t time_EEPROM_WRITE_count = 10;
+"61
+[; ;main.c: 61: uint16_t time_EEPROM_WRITE_count = 10;
 [v _time_EEPROM_WRITE_count `us ~T0 @X0 1 e ]
 [i _time_EEPROM_WRITE_count
 -> -> 10 `i `us
 ]
-"62
-[; ;main.c: 62: static unsigned char last_saved_status = 0xFF;
+"65
+[; ;main.c: 65: static unsigned char last_saved_status = 0xFF;
 [v _last_saved_status `uc ~T0 @X0 1 s ]
 [i _last_saved_status
 -> -> 255 `i `uc
 ]
 [v $root$_main `(v ~T0 @X0 0 e ]
-"65
-[; ;main.c: 65: void main(void)
+"68
+[; ;main.c: 68: void main(void)
 [v _main `(v ~T0 @X0 1 ef ]
-"66
-[; ;main.c: 66: {
+"69
+[; ;main.c: 69: {
 {
 [e :U _main ]
 [f ]
-"68
-[; ;main.c: 68:     SYSTEM_Initialize();
+"71
+[; ;main.c: 71:     SYSTEM_Initialize();
 [e ( _SYSTEM_Initialize ..  ]
-"70
-[; ;main.c: 70:     do { TRISAbits.TRISA5 = 0; } while(0);
+"73
+[; ;main.c: 73:     do { TRISAbits.TRISA5 = 0; } while(0);
 [e :U 447 ]
 {
 [e = . . _TRISAbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 446 ]
-"72
-[; ;main.c: 72:     uint16_t ldr1 = 0;
+"75
+[; ;main.c: 75:     uint16_t ldr1 = 0;
 [v _ldr1 `us ~T0 @X0 1 a ]
 [e = _ldr1 -> -> 0 `i `us ]
-"73
-[; ;main.c: 73:     uint16_t ldr2 = 0;
+"76
+[; ;main.c: 76:     uint16_t ldr2 = 0;
 [v _ldr2 `us ~T0 @X0 1 a ]
 [e = _ldr2 -> -> 0 `i `us ]
-"74
-[; ;main.c: 74:     _Bool V_LightStatus;
+"77
+[; ;main.c: 77:     _Bool V_LightStatus;
 [v _V_LightStatus `a ~T0 @X0 1 a ]
-"75
-[; ;main.c: 75:     uint32_t myTimer = 0;
+"78
+[; ;main.c: 78:     uint32_t myTimer = 0;
 [v _myTimer `ul ~T0 @X0 1 a ]
 [e = _myTimer -> -> -> 0 `i `l `ul ]
-"77
-[; ;main.c: 77:     V_LightStatus =old_light_status();
-[e = _V_LightStatus -> ( _old_light_status ..  `a ]
-"78
-[; ;main.c: 78:     while (1)
-[e :U 449 ]
-"79
-[; ;main.c: 79: {
-{
 "80
-[; ;main.c: 80:     ldr1 = ADC1_GetConversion(channel_AN0);
-[e = _ldr1 ( _ADC1_GetConversion (1 . `E3375 0 ]
+[; ;main.c: 80:     V_LightStatus =old_light_status();
+[e = _V_LightStatus -> ( _old_light_status ..  `a ]
 "81
-[; ;main.c: 81:     _delay((unsigned long)((5)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+[; ;main.c: 81:     while (1)
+[e :U 449 ]
 "82
-[; ;main.c: 82:     ldr2 = ADC1_GetConversion(channel_AN2);
-[e = _ldr2 ( _ADC1_GetConversion (1 . `E3375 1 ]
-"83
-[; ;main.c: 83:     _delay((unsigned long)((5)*(4000000/4000.0)));
-[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"87
-[; ;main.c: 87:     if (ldr1 > 750 && ldr2 > 750)
-[e $ ! && > -> _ldr1 `ui -> -> 750 `i `ui > -> _ldr2 `ui -> -> 750 `i `ui 451  ]
-"88
-[; ;main.c: 88:     {
+[; ;main.c: 82: {
 {
-"89
-[; ;main.c: 89:         if (V_LightStatus == 0)
-[e $ ! == -> _V_LightStatus `i -> 0 `i 452  ]
+"83
+[; ;main.c: 83:     ldr1 = ADC1_GetConversion(channel_AN0);
+[e = _ldr1 ( _ADC1_GetConversion (1 . `E3375 0 ]
+"84
+[; ;main.c: 84:     _delay((unsigned long)((5)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
+"85
+[; ;main.c: 85:     ldr2 = ADC1_GetConversion(channel_AN2);
+[e = _ldr2 ( _ADC1_GetConversion (1 . `E3375 1 ]
+"86
+[; ;main.c: 86:     _delay((unsigned long)((5)*(4000000/4000.0)));
+[e ( __delay (1 -> * -> -> 5 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
 "90
-[; ;main.c: 90:         {
+[; ;main.c: 90:     if (ldr1 > 750 && ldr2 > 750)
+[e $ ! && > -> _ldr1 `ui -> -> 750 `i `ui > -> _ldr2 `ui -> -> 750 `i `ui 451  ]
+"91
+[; ;main.c: 91:     {
 {
 "92
-[; ;main.c: 92:             do { LATAbits.LATA5 = 1; } while(0);
+[; ;main.c: 92:         if (V_LightStatus == 0)
+[e $ ! == -> _V_LightStatus `i -> 0 `i 452  ]
+"93
+[; ;main.c: 93:         {
+{
+"95
+[; ;main.c: 95:             do { LATAbits.LATA5 = 1; } while(0);
 [e :U 455 ]
 {
 [e = . . _LATAbits 0 5 -> -> 1 `i `uc ]
 }
 [e :U 454 ]
-"93
-[; ;main.c: 93:             V_LightStatus = 1;
+"96
+[; ;main.c: 96:             V_LightStatus = 1;
 [e = _V_LightStatus -> -> 1 `i `a ]
-"95
-[; ;main.c: 95:             SoftDelay_Start(&myTimer);
-[e ( _SoftDelay_Start (1 &U _myTimer ]
 "98
-[; ;main.c: 98:             if (V_LightStatus != last_saved_status)
-[e $ ! != -> _V_LightStatus `i -> _last_saved_status `i 456  ]
-"99
-[; ;main.c: 99:             {
-{
-"100
-[; ;main.c: 100:                 ReadWrite_HEFlash(1, V_LightStatus, 0x0780);
-[e ( _ReadWrite_HEFlash (3 , , -> -> 1 `i `uc -> _V_LightStatus `uc -> -> 1920 `i `us ]
+[; ;main.c: 98:             SoftDelay_Start(&myTimer);
+[e ( _SoftDelay_Start (1 &U _myTimer ]
 "101
-[; ;main.c: 101:                 last_saved_status = V_LightStatus;
-[e = _last_saved_status -> _V_LightStatus `uc ]
+[; ;main.c: 101:             if (V_LightStatus != last_saved_status)
+[e $ ! != -> _V_LightStatus `i -> _last_saved_status `i 456  ]
 "102
-[; ;main.c: 102:             }
+[; ;main.c: 102:             {
+{
+"103
+[; ;main.c: 103:                 ReadWrite_HEFlash(1, V_LightStatus, 0x0780);
+[e ( _ReadWrite_HEFlash (3 , , -> -> 1 `i `uc -> _V_LightStatus `uc -> -> 1920 `i `us ]
+"104
+[; ;main.c: 104:                 last_saved_status = V_LightStatus;
+[e = _last_saved_status -> _V_LightStatus `uc ]
+"105
+[; ;main.c: 105:             }
 }
 [e :U 456 ]
-"103
-[; ;main.c: 103:         }
+"106
+[; ;main.c: 106:         }
 }
 [e :U 452 ]
-"105
-[; ;main.c: 105:         if (SoftDelay_IsOneMinuteOver(&myTimer))
+"108
+[; ;main.c: 108:         if (SoftDelay_IsOneMinuteOver(&myTimer))
 [e $ ! != -> ( _SoftDelay_IsOneMinuteOver (1 &U _myTimer `i -> 0 `i 457  ]
-"106
-[; ;main.c: 106:         {
+"109
+[; ;main.c: 109:         {
 {
-"107
-[; ;main.c: 107:             do { LATAbits.LATA5 = 0; } while(0);
+"110
+[; ;main.c: 110:             do { LATAbits.LATA5 = 0; } while(0);
 [e :U 460 ]
 {
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 459 ]
-"108
-[; ;main.c: 108:             V_LightStatus = 0;
-[e = _V_LightStatus -> -> 0 `i `a ]
 "111
-[; ;main.c: 111:             if (V_LightStatus != last_saved_status)
-[e $ ! != -> _V_LightStatus `i -> _last_saved_status `i 461  ]
-"112
-[; ;main.c: 112:             {
-{
-"113
-[; ;main.c: 113:                 ReadWrite_HEFlash(1, V_LightStatus, 0x0780);
-[e ( _ReadWrite_HEFlash (3 , , -> -> 1 `i `uc -> _V_LightStatus `uc -> -> 1920 `i `us ]
+[; ;main.c: 111:             V_LightStatus = 0;
+[e = _V_LightStatus -> -> 0 `i `a ]
 "114
-[; ;main.c: 114:                 last_saved_status = V_LightStatus;
-[e = _last_saved_status -> _V_LightStatus `uc ]
+[; ;main.c: 114:             if (V_LightStatus != last_saved_status)
+[e $ ! != -> _V_LightStatus `i -> _last_saved_status `i 461  ]
 "115
-[; ;main.c: 115:             }
+[; ;main.c: 115:             {
+{
+"116
+[; ;main.c: 116:                 ReadWrite_HEFlash(1, V_LightStatus, 0x0780);
+[e ( _ReadWrite_HEFlash (3 , , -> -> 1 `i `uc -> _V_LightStatus `uc -> -> 1920 `i `us ]
+"117
+[; ;main.c: 117:                 last_saved_status = V_LightStatus;
+[e = _last_saved_status -> _V_LightStatus `uc ]
+"118
+[; ;main.c: 118:             }
 }
 [e :U 461 ]
-"116
-[; ;main.c: 116:         }
+"119
+[; ;main.c: 119:         }
 }
 [e :U 457 ]
-"117
-[; ;main.c: 117:     }
+"120
+[; ;main.c: 120:     }
 }
 [e $U 462  ]
-"118
-[; ;main.c: 118:     else
-[e :U 451 ]
-"119
-[; ;main.c: 119:     {
-{
-"120
-[; ;main.c: 120:         if (V_LightStatus == 1)
-[e $ ! == -> _V_LightStatus `i -> 1 `i 463  ]
 "121
-[; ;main.c: 121:         {
-{
+[; ;main.c: 121:     else
+[e :U 451 ]
 "122
-[; ;main.c: 122:             do { LATAbits.LATA5 = 0; } while(0);
+[; ;main.c: 122:     {
+{
+"123
+[; ;main.c: 123:         if (V_LightStatus == 1)
+[e $ ! == -> _V_LightStatus `i -> 1 `i 463  ]
+"124
+[; ;main.c: 124:         {
+{
+"125
+[; ;main.c: 125:             do { LATAbits.LATA5 = 0; } while(0);
 [e :U 466 ]
 {
 [e = . . _LATAbits 0 5 -> -> 0 `i `uc ]
 }
 [e :U 465 ]
-"123
-[; ;main.c: 123:             V_LightStatus = 0;
-[e = _V_LightStatus -> -> 0 `i `a ]
 "126
-[; ;main.c: 126:             if (V_LightStatus != last_saved_status)
-[e $ ! != -> _V_LightStatus `i -> _last_saved_status `i 467  ]
-"127
-[; ;main.c: 127:             {
-{
-"128
-[; ;main.c: 128:                 ReadWrite_HEFlash(1, V_LightStatus, 0x0780);
-[e ( _ReadWrite_HEFlash (3 , , -> -> 1 `i `uc -> _V_LightStatus `uc -> -> 1920 `i `us ]
+[; ;main.c: 126:             V_LightStatus = 0;
+[e = _V_LightStatus -> -> 0 `i `a ]
 "129
-[; ;main.c: 129:                 last_saved_status = V_LightStatus;
-[e = _last_saved_status -> _V_LightStatus `uc ]
+[; ;main.c: 129:             if (V_LightStatus != last_saved_status)
+[e $ ! != -> _V_LightStatus `i -> _last_saved_status `i 467  ]
 "130
-[; ;main.c: 130:             }
+[; ;main.c: 130:             {
+{
+"131
+[; ;main.c: 131:                 ReadWrite_HEFlash(1, V_LightStatus, 0x0780);
+[e ( _ReadWrite_HEFlash (3 , , -> -> 1 `i `uc -> _V_LightStatus `uc -> -> 1920 `i `us ]
+"132
+[; ;main.c: 132:                 last_saved_status = V_LightStatus;
+[e = _last_saved_status -> _V_LightStatus `uc ]
+"133
+[; ;main.c: 133:             }
 }
 [e :U 467 ]
-"131
-[; ;main.c: 131:         }
+"134
+[; ;main.c: 134:         }
 }
 [e :U 463 ]
-"132
-[; ;main.c: 132:     }
+"135
+[; ;main.c: 135:     }
 }
 [e :U 462 ]
-"134
-[; ;main.c: 134:     _delay((unsigned long)((100)*(4000000/4000.0)));
+"137
+[; ;main.c: 137:     _delay((unsigned long)((100)*(4000000/4000.0)));
 [e ( __delay (1 -> * -> -> 100 `i `d / -> -> 4000000 `l `d .4000.0 `ul ]
-"135
-[; ;main.c: 135: }
+"138
+[; ;main.c: 138: }
 }
 [e :U 448 ]
 [e $U 449  ]
 [e :U 450 ]
-"136
-[; ;main.c: 136: }
+"139
+[; ;main.c: 139: }
 [e :UE 444 ]
 }
